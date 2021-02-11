@@ -13,6 +13,13 @@
     --White: hsl(0, 0%, 100%);
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
 .attribution {
     font-size: 11px;
     text-align: center;
@@ -20,4 +27,137 @@
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+.header {
+    background: var(--DarkBlueintroanemail);
+    display: flex;
+    padding: 25px;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    left: 0;
+    right: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.header .header-logo img {
+    width: 100px;
+    cursor: pointer;
+}
+
+.header .header-conten .menu {
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    top: 0;
+}
+
+.header .header-conten .menu .menu-item {
+    list-style: none;
+}
+
+.header .header-conten .menu .menu-item a {
+    color: var(--White);
+    text-decoration: none;
+}
+
+.header .header-conten .menu .menu-item a:hover {
+    text-decoration: underline;
+}
+
+
+/* HERO SECTION */
+
+.container {
+    padding: 0 25px;
+    text-align: center;
+}
+
+.hero .hero-img {
+    max-width: 100%;
+}
+
+.hero .hero-description {
+    font-size: .95rem;
+}
+
+.btn {
+    display: inline-block;
+    background-image: linear-gradient(to right, var(--Cyangradient) 0%, var(--Bluegradient) 100%);
+    text-decoration: none;
+    color: var(--White);
+    padding: 10px 70px;
+    border-radius: 35px;
+    margin: 25px auto;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-image: none;
+    background-color: var(--Cyangradient);
+}
+
+
+/* ACTIONS SECTION STYLES */
+
+.actions {
+    display: grid;
+    gap: 30px;
+}
+
+.actions .actions-item {
+    border: 1px solid red;
+}
+
+.calltoaction {
+    margin: 60px 0;
+    text-align: left;
+    /* font-family: 'Raleway', sans-serif; */
+}
+
+.calltoaction .calltoaction-img {
+    width: 100%;
+}
+
+.calltoaction .calltoaction-link {
+    color: var(--Cyangradient);
+    cursor: pointer;
+}
+
+.testimonials {
+    display: grid;
+    gap: 25px;
+}
+
+.testimonials .testimonials-img {
+    width: 25px;
+}
+
+.testimonials .testimonials-card {
+    padding: 10px;
+    border: 1px solid red;
+    text-align: left;
+}
+
+.testimonials .testimonials-person {
+    display: flex;
+    align-items: center;
+}
+
+.testimonials .testimonials-person .person-img {
+    width: 45px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.testimonials .testimonials-person .person-data .person-name {
+    display: block;
+    margin: 0;
+}
+
+.testimonials .testimonials-person .person-data .person-profession {
+    font-size: .6em;
+    font-weight: 700;
 }
