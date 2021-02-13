@@ -64,16 +64,33 @@ body {
 /* HERO SECTION */
 
 .container {
-    padding: 0 25px;
     text-align: center;
     background-color: var(--DarkBluemain);
+    position: relative;
+}
+
+.hero {
+    padding-top: 70px;
+    background: var(--DarkBlueintroanemail);
+    background-image: url(../images/bg-curvy-mobile.svg);
+    background-repeat: no-repeat;
+    background-position-y: bottom 183px;
 }
 
 .hero .hero-img {
     max-width: 100%;
 }
 
-.hero .hero-description {
+.hero .hero-title {
+    padding: 0 30px;
+}
+
+.hero .hero-back {
+    background-color: var(--DarkBluemain);
+    padding: 0 25px;
+}
+
+.hero .hero-back .hero-description {
     font-size: .95rem;
 }
 
@@ -97,6 +114,7 @@ body {
 /* ACTIONS SECTION STYLES */
 
 .actions {
+    padding: 0 25px;
     display: grid;
     gap: 30px;
     margin-top: 50px;
@@ -105,6 +123,7 @@ body {
 .actions .actions-item {}
 
 .calltoaction {
+    padding: 0 25px;
     margin: 60px 0;
     text-align: left;
     /* font-family: 'Raleway', sans-serif; */
@@ -120,12 +139,13 @@ body {
 }
 
 .testimonials {
+    padding: 0 25px;
     display: grid;
     gap: 35px;
 }
 
 .testimonials .testimonials-img {
-    width: 25px;
+    /* width: 25px; */
 }
 
 .testimonials .testimonials-card {
@@ -158,9 +178,16 @@ body {
 }
 
 .form-container {
+    margin: 0 25px;
+    border-radius: 10px;
     margin-top: 70px;
     padding: 20px 10px;
-    background-color: var(--DarkBlueintroanemail);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    background: var(--DarkBlueintroanemail);
 }
 
 .form-container form {
@@ -247,4 +274,122 @@ footer .attribution {
 footer .attribution a {
     color: hsl(228, 45%, 44%);
     text-decoration: none;
+}
+
+footer .footer-social {
+    margin-bottom: 30px;
+}
+
+footer .footer-social .social-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+footer .footer-social .social-list li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer .footer-social .social-list li a svg {
+    width: 40px;
+    height: 30px;
+}
+
+footer .footer-social .social-list li a svg:hover path {
+    fill: var(--Cyangradient);
+}
+
+@media screen and (min-width:720px) {
+    body {
+        font-size: 1.4rem;
+    }
+    .hero {
+        background-image: url('../images/bg-curvy-desktop.svg');
+        background-position: bottom;
+        background-size: 1337px 396px;
+    }
+    .hero .hero-title {
+        width: 600px;
+        margin: auto;
+        margin-bottom: 35px;
+    }
+    .hero .hero-back .hero-description {
+        width: 450px;
+        margin: auto;
+    }
+    .actions {
+        grid-template-columns: 1fr 1fr;
+        font-size: 1.42rem;
+        padding: 0 130px;
+        margin-top: 120px;
+    }
+    .calltoaction {
+        display: grid;
+        grid-template-columns: 500px auto;
+        gap: 90px;
+        align-items: center;
+        padding: 50px;
+    }
+    .calltoaction .calltoaction-title {
+        font-size: 3.2rem;
+    }
+    .testimonials {
+        padding-bottom: 374px;
+        grid-template-columns: 1fr 1fr 1fr;
+        position: relative;
+    }
+    .testimonials-img {
+        position: absolute;
+        top: -30px;
+        left: 15px;
+    }
+    .testimonials-card:nth-child(2) {
+        position: relative;
+    }
+    .form-container {
+        margin: 0 170px;
+        padding: 15px 45px;
+        font-size: 1.2rem;
+    }
+    .form-container form {
+        display: grid;
+        grid-template-columns: 1fr 350px;
+    }
+    footer {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 200px auto;
+        grid-template-areas: "logo logo logo logo" "location contact links social";
+    }
+    footer .footer-logo {
+        grid-area: logo;
+    }
+    footer .form-control.location {
+        grid-area: location;
+    }
+    footer .footer-contact {
+        grid-area: contact;
+        align-self: start;
+    }
+    footer .footer-links {
+        margin: 0;
+        grid-area: links;
+        display: flex;
+        gap: 55px;
+    }
+    footer .footer-links .links-control li {
+        margin: 0;
+    }
+    footer .footer-links .links-control {
+        margin: 0;
+        padding: 10px;
+    }
+    footer .footer-social .social-list {
+        grid-area: social;
+        display: flex;
+    }
 }
